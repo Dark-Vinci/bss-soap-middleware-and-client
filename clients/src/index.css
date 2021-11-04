@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Quicksand';
+  src: url("./font/Quicksand-Light.woff2") format("woff2"), url("./font/Quicksand-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+monospace;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quicksand';
+  background-color: #8d4bdd;
+  height: 100vh;
+  overflow-y: hidden;
+  color: white;
+}
+
+body div.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body div.App div.modal {
+  position: fixed;
+  -webkit-transition: all 1.1s;
+  transition: all 1.1s;
+  background-color: #4242fc;
+  z-index: 3;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body div.App div.modal div.icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #000088;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 0 0 20px 0;
+}
+
+body div.App div.modal div.toRender {
+  text-align: center;
+  position: relative;
+  top: calc(100vh/2 - 120px);
+}
+
+body div.App div.modal div.toRender h2 {
+  font-size: 16px;
+}
+
+body div.App div.modal div.toRender div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body div.App div.modal div.toRender div div {
+  width: auto;
+  height: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+body div.App h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body div.App div.buttons button {
+  color: white;
+  background-color: #3a013a;
+  border: none;
+  height: 40px;
+  margin-right: 10px;
+  width: 120px;
+  font-size: 14px;
+  padding: 0px;
+  font-family: inherit;
+  border-radius: 17px;
 }
